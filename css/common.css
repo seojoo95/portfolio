@@ -326,9 +326,9 @@ nav {
   letter-spacing: 0.8px;
 }
 .folderImg .DecoTxtWrap .number {
-  top: 2%;
+  top: 3px;
   right: 4%;
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: clamp(16px, 1.6vw, 22px);
   font-weight: 800;
 }
 .folderImg .DecoTxtWrap .tit {
@@ -350,15 +350,15 @@ nav {
   right: 3%;
 }
 .folderName {
-  margin-top: 18px;
+  margin-top: 14px;
   text-align: center;
   font-size: clamp(14px, 1.6vw, 20px);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--white);
 }
 .folderName .subTxt {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 500;
   color: var(--white);
 }
@@ -655,12 +655,25 @@ nav {
   .folderName {
     margin-top: 12px;
   }
+  .folderImg .DecoTxtWrap .number {
+    top: 1.5px;
+  }
 
   .footerCont {
     width: 90%;
   }
   .footerCont .infoWrap {
     margin-top: 100px;
+  }
+}
+/* 가로형 */
+@media (orientation: landscape) and (pointer: coarse) {
+  .projectListWrap .projectList {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .work .projectList .projectCont {
+    width: calc((100% - 10%) / 3);
   }
 }
 
@@ -670,18 +683,4 @@ nav {
 }
 .projectListWrap.show {
   display: block;
-}
-
-/* 가로형 */
-@media (orientation: landscape) and (pointer: coarse) {
-  .introduceWrap {
-    /* height: 900px; */
-  }
-  .projectListWrap .projectList {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .work .projectList .projectCont {
-    width: calc((100% - 10%) / 3);
-  }
 }
