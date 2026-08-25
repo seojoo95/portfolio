@@ -22,15 +22,12 @@ function pageAnimation() {
           ease: "power4.in",
           repeat: -1,
           yoyo: true,
-          onStart: () => {
-            body.classList.add("noScroll");
-          },
         },
       );
     });
   }
 
-  gsap.delayedCall(5, () => {
+  gsap.delayedCall(4, () => {
     gsap.killTweensOf(chars);
 
     // 제자리 정렬
@@ -39,10 +36,6 @@ function pageAnimation() {
       y: 0,
       rotation: 0,
       duration: 2,
-      onComplete: () => {
-        body.classList.remove("noScroll");
-        sectionScroll();
-      },
     });
   });
 }
@@ -51,6 +44,20 @@ function sectionScroll() {
   ScrollTrigger.matchMedia({
     "(min-width: 1024px)": function () {
       const sections = gsap.utils.toArray(".section");
+      const introWrap = document.querySelector(".section.introduceWrap");
+
+      ScrollTrigger.create({
+        trigger: introWrap,
+        start: "top top",
+
+        onEnter: () => {
+          progress();
+        },
+
+        onLeaveBack: () => {
+          progressReset();
+        },
+      });
 
       sections.forEach((section) => {
         ScrollTrigger.create({
@@ -61,7 +68,27 @@ function sectionScroll() {
         });
       });
     },
+    "(max-width: 1023px)": function () {
+      progress();
+    },
   });
 }
+
+function progress() {
+  const progressBars = document.querySelectorAll(".grahp .progress");
+
+  progressBars.forEach((bar) => {
+    const percent = bar.dataset.percent;
+    bar.style.width = `${percent}%`;
+  });
+}
+
+function progressReset() {
+  const progressBars = document.querySelectorAll(".grahp .progress");
+
+  progressBars.forEach((bar) => {
+    bar.style.width = "0%";
+  });
+}
+sectionScroll();
 pageAnimation();
-moreBtnAnimation();

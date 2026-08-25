@@ -50,7 +50,6 @@ function moreBtnAnimation() {
   moreBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const projectList = btn.closest(".projectList");
-      const detailCont = projectList.querySelector(".detailCont");
 
       // 열려있는지 확인
       const isOpen = projectList.classList.contains("show");

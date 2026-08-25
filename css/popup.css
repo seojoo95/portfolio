@@ -349,6 +349,7 @@
 .projecDetailInfoWrap .projectList:last-of-type {
   margin-bottom: 0;
 }
+
 .projecDetailInfoWrap .projectList .moreBtn.active {
   transform: rotate(180deg);
 }

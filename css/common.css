@@ -35,7 +35,7 @@
   letter-spacing: 30px;
   text-align: center;
 }
-.introTit > div {
+.introTit div {
   font-size: clamp(20px, 6.5vw, 80px);
   font-weight: 1000;
   font-family: "brigends", sans-serif;
@@ -196,10 +196,11 @@
   top: 50%;
   left: 3px;
   transform: translateY(-50%);
-  width: 70%;
+  width: 0;
   height: 7px;
   border-radius: 30px;
   background-color: #1e393c;
+  transition: 300ms;
 }
 .infoTxt .skillValue {
   font-size: var(--fs-normall);
@@ -226,29 +227,31 @@
   width: 100%;
 }
 .nav {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20%;
+  gap: 50px;
 }
-.nav li > button {
+.nav li {
+  cursor: pointer;
+}
+.nav li button {
+  padding: 5px 8px;
   font-size: clamp(12px, 2vw, 22px);
   font-family: "brigends", sans-serif;
   color: var(--white);
-  cursor: pointer;
 }
-.nav li.on > button {
-  height: 35px;
-  padding: 0 15px 3px 15px;
-  background-color: var(--orange);
+.nav li.on button {
+  background: var(--orange);
 }
-
-.nav li.on > button:hover {
-  background-color: var(--white);
+.nav li:hover button {
   color: var(--orange);
   transition: 300ms;
+  cursor: pointer;
 }
-.nav li > button:hover {
+.nav li.on:hover > button {
+  background-color: var(--white);
   color: var(--orange);
   transition: 300ms;
 }
@@ -554,11 +557,6 @@
   }
   .nav {
     gap: 20px;
-  }
-  .nav > li.on {
-    height: 22px;
-    line-height: 20px;
-    padding: 0 12px;
   }
   /* 프로젝트 리스트 */
   .projectListWrap {

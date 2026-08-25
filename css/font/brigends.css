@@ -3,5 +3,5 @@
   font-weight: 800;
   src:
     local("Brigends Expanded"),
-    url(../../fonts/Brigends\ Expanded.otf) format("otf");
+    url("../../fonts/Brigends Expanded.otf") format("opentype");
 }
