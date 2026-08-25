@@ -14,10 +14,22 @@
   width: 100%;
   max-width: 1920px;
   height: 100vh;
+  min-height: 800px;
   margin: 0 auto;
   background: url("../images/bg/intro.jpg") no-repeat center / cover;
   background-color: var(--dark);
   overflow: hidden;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: rgb(187, 199, 200);
+}
+*::-webkit-scrollbar-thumb {
+  background: #2e585e;
+  border-radius: 4px;
 }
 
 /* intro */
@@ -51,15 +63,16 @@
 }
 .introduceWrap .decoTxt {
   display: block;
-  padding-top: 30px;
+  padding-top: 20px;
   color: #89b1a9;
   opacity: 0.4;
   font-size: clamp(40px, 6.5vw, 120px);
   font-family: "brigends", sans-serif;
 }
 .introduceContainer {
+  height: calc(100% - 140px);
   display: flex;
-  padding-top: 200px;
+  align-items: center;
   justify-content: center;
   gap: 30px;
 }
@@ -208,6 +221,7 @@
 
 /* project */
 .projectWrap {
+  position: relative;
   background-image: url("../images/bg/work.jpg");
 }
 .header {
@@ -215,7 +229,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1600px;
-  height: 120px;
+  height: 80px;
   padding: 0 30px;
   margin: 0 auto;
   line-height: 80px;
@@ -226,19 +240,26 @@
 .logo > img {
   width: 100%;
 }
+nav {
+  height: 100%;
+}
 .nav {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 50px;
 }
 .nav li {
+  display: flex;
+  align-items: center;
+  height: 100%;
   cursor: pointer;
 }
 .nav li button {
   padding: 5px 8px;
-  font-size: clamp(12px, 2vw, 22px);
+  font-size: clamp(12px, 1.5vw, 20px);
   font-family: "brigends", sans-serif;
   color: var(--white);
 }
@@ -260,31 +281,23 @@
 .projectListWrap {
   position: relative;
   max-width: 1600px;
-  height: calc(100% - 200px);
-  padding: 0 90px;
+  height: calc(100% - 100px);
+  padding: 0 50px;
   margin: 0 auto;
 }
 .projectListWrap .projectList {
-  position: absolute;
-  top: calc(50% - 60px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
+  height: 95%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 80px 10%;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 3%;
 }
 .projectList .projectCont {
-  width: calc((100% - 20%) / 3);
-  max-width: 370px;
-}
-.projectListWrap.work .projectList {
-  gap: 80px 12%;
+  width: calc((100% - 10%) / 3);
 }
 .work .projectList .projectCont {
-  width: calc((100% - 10%) / 2);
+  width: calc((100% - 10%) / 3);
 }
 .projectList .projectCont:hover .folderImg {
   box-shadow:
@@ -301,20 +314,20 @@
 }
 .folderImg .DecoTxtWrap > p {
   position: absolute;
-  font-size: clamp(8px, 1.4vw, 12px);
+  font-size: clamp(8px, 1.2vw, 12px);
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
 .folderImg .DecoTxtWrap .number {
   top: 2%;
   right: 4%;
-  font-size: clamp(16px, 2.2vw, 22px);
+  font-size: clamp(16px, 2vw, 22px);
   font-weight: 800;
 }
 .folderImg .DecoTxtWrap .tit {
   top: 19%;
   right: 7%;
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(8px, 1.2vw, 14px);
   font-weight: 800;
 }
 .folderImg .DecoTxtWrap .category {
@@ -330,9 +343,9 @@
   right: 3%;
 }
 .folderName {
-  margin-top: 24px;
+  margin-top: 18px;
   text-align: center;
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(14px, 1.6vw, 20px);
   font-weight: 800;
   color: var(--white);
 }
@@ -343,10 +356,12 @@
   color: var(--white);
 }
 .animationWrap {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  padding: 30px 0;
   opacity: 0.4;
 }
 .animationCont {
@@ -429,33 +444,48 @@
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 40px;
   }
   .profileWrap {
     flex-direction: row;
     width: 100%;
-    gap: 8%;
+    gap: 5%;
   }
   .profileWrap .imgCont {
-    width: 220px;
+    width: 190px;
     max-width: none;
     margin: 0;
   }
   .profileWrap .infoCont {
     margin-top: 0;
   }
+  .infoCont .info:nth-of-type(2) {
+    margin-top: 22px;
+  }
 
   /* 내 정보 */
+  .introduceWrap .decoTxt {
+    padding-top: 15px;
+  }
   .myInfoWrap {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 44px;
     gap: 5%;
   }
   .myInfoWrap .leftGroup {
     width: 50%;
   }
   .myInfoWrap .leftGroup .myInfoCont {
-    margin-bottom: 54px;
+    margin-bottom: 46px;
+  }
+  .myInfoWrap .infoTxtWrap {
+    margin-top: 14px;
+  }
+  .infoTxtWrap .infoTxt {
+    margin-bottom: 14px;
+  }
+  .keywordCont .infoTxtWrap .infoTxt {
+    margin-bottom: 0;
   }
   /* 스킬 */
   .skillCont {
@@ -465,21 +495,47 @@
     width: 35%;
   }
 }
-
 /* 타블렛 */
 @media screen and (max-width: 1024px) {
-  /* 프로젝트 리스트*/
-  .projectListWrap .projectList {
-    width: 90%;
-    top: 50%;
-    gap: 80px 15%;
+  .introduceWrap {
+    height: 700px;
   }
-  .projectList .projectCont {
-    width: calc((100% - 30%) / 2);
-    max-width: 280px;
+  .introduceWrap,
+  .projectWrap {
+    height: fit-content;
+    padding-bottom: 100px;
+  }
+  .projectWrap {
+    height: 700px;
+    padding-bottom: 0;
+  }
+  .nav {
+    gap: 30px;
+  }
+  .projectListWrap {
+    height: 700px;
+  }
+
+  .projectListWrap .projectList {
+    width: 95%;
+    height: 80%;
+    flex-wrap: wrap;
+    gap: 0 60px;
+  }
+  .work .projectListWrap .projectList {
+    justify-content: flex-start;
+  }
+  .projectList .projectCont,
+  .work .projectList .projectCont {
+    width: calc((100% - 10%) / 2);
+    max-width: 240px;
   }
 }
-
+@media screen and (max-width: 989px) {
+  .projectListWrap .projectList {
+    justify-content: center;
+  }
+}
 /* 모바일 */
 @media screen and (max-width: 759px) {
   /* 인트로 */
@@ -547,8 +603,11 @@
   .projectWrap {
     height: auto;
   }
+  .projectListWrap {
+    height: auto;
+  }
   .header {
-    height: 80px;
+    height: 60px;
     padding: 0 20px;
   }
   .logo {
@@ -563,24 +622,23 @@
     padding: 0;
   }
   .projectListWrap .projectList {
-    position: initial;
     display: block;
-    transform: none;
-    padding: 50px 0;
+    padding-top: 30px;
     margin: 0 auto;
   }
   .projectList .projectCont,
   .work .projectList .projectCont {
-    width: 240px;
+    width: 190px;
     max-width: none;
     margin: 0 auto;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
   }
   .projectList .projectCont:last-of-type {
     margin-bottom: 0;
+    padding-bottom: 80px;
   }
-  .animationWrap {
-    padding: 20px 0;
+  .folderName {
+    margin-top: 12px;
   }
 
   .footerCont {
@@ -597,4 +655,18 @@
 }
 .projectListWrap.show {
   display: block;
+}
+
+/* 가로형 */
+@media (orientation: landscape) and (pointer: coarse) {
+  .introduceWrap {
+    /* height: 900px; */
+  }
+  .projectListWrap .projectList {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .work .projectList .projectCont {
+    width: calc((100% - 10%) / 3);
+  }
 }

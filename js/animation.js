@@ -42,7 +42,7 @@ function pageAnimation() {
 
 function sectionScroll() {
   ScrollTrigger.matchMedia({
-    "(min-width: 1024px)": function () {
+    "(min-width: 1400px) and (min-height:1000px)": function () {
       const sections = gsap.utils.toArray(".section");
       const introWrap = document.querySelector(".section.introduceWrap");
 
