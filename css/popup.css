@@ -1,0 +1,363 @@
+@charset "utf-8";
+.noScroll {
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+.projectPopWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 9;
+}
+.projectPopContaier {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  height: 90%;
+  background-color: #eceeee;
+  overflow: hidden;
+}
+.closeBtn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+.closeBtn > img {
+  width: 100%;
+}
+.projectPopCont {
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+}
+.projectPopCont::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.projectPopCont::-webkit-scrollbar-track {
+  background: rgb(187, 199, 200);
+}
+.projectPopCont::-webkit-scrollbar-thumb {
+  background: #2e585e;
+  border-radius: 4px;
+}
+.projectHeader {
+  padding-top: 25px;
+}
+.projectHeader .projectName {
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+.projectHeader .projectSubTxt {
+  margin-top: 14px;
+  font-size: clamp(12px, 1.2vw, 16px);
+  letter-spacing: -0.3px;
+}
+.projectHeader .toolList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.projectHeader .toolList > li {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: var(--darkgreen);
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: var(--white);
+}
+.projectHeader .toolList > li.jquery {
+  padding: 5px 10px 5px 12px;
+}
+.projectVisual {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.projectVisual > img {
+  width: 100%;
+}
+
+/* projecDetailInfoWrap */
+.projectDetailWrap {
+  width: 100%;
+  margin-top: 60px;
+}
+.projecDetailInfoWrap .projectList {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background: rgb(215, 220, 221, 0.7);
+}
+.projecDetailInfoWrap .listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: -0.3px;
+}
+.projecDetailInfoWrap .listHeaderCont .tit {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 800;
+}
+.projecDetailInfoWrap .listHeaderCont .subTit {
+  margin-top: 12px;
+  font-size: clamp(14px, 2vw, 16px);
+}
+.projecDetailInfoWrap .listHeader .badgeWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 22px;
+}
+.projecDetailInfoWrap .listHeader .badgeWrap > p {
+  position: relative;
+}
+.projecDetailInfoWrap .listHeader .badgeWrap > p:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.projecDetailInfoWrap .listHeader .badgeWrap > p:last-of-type:after {
+  display: none;
+}
+.projecDetailInfoWrap .projectList .moreBtn {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: 300ms;
+}
+.projecDetailInfoWrap .projectList .moreBtn > img {
+  width: 100%;
+}
+
+/* projecDetailInfoWrap detailCont*/
+.projecDetailInfoWrap .projectList .detailCont {
+  /* display: none; */
+  margin-top: 50px;
+}
+.projecDetailInfoWrap .projectList .detailSection {
+  margin-bottom: 60px;
+  letter-spacing: -0.2px;
+}
+.projecDetailInfoWrap .projectList .detailSection:last-of-type {
+  margin-bottom: 0;
+}
+.projecDetailInfoWrap .projectList .detailSection .tit {
+  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.projecDetailInfoWrap .projectList .detail {
+  margin-top: 18px;
+}
+.projecDetailInfoWrap .projectList .detail > p {
+  margin-top: 16px;
+}
+.projecDetailInfoWrap .projectList .detail > p:first-of-type {
+  margin-top: 0;
+}
+.projecDetailInfoWrap .projectList .detail > p > span {
+  padding-left: 8px;
+}
+.projecDetailInfoWrap .projectList .detail > p > span:first-of-type {
+  padding-left: 0;
+}
+.projecDetailInfoWrap .detailListWrap {
+  display: flex;
+  margin-top: 28px;
+}
+.projecDetailInfoWrap .detailListWrap:first-of-type {
+  margin-top: 0;
+}
+.projecDetailInfoWrap .detailListWrap .listTit {
+  width: 18%;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 600;
+}
+.projecDetailInfoWrap .detailListWrap .detailList {
+  width: 82%;
+}
+.projecDetailInfoWrap .detailListWrap .detailList li {
+  position: relative;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+.projecDetailInfoWrap .detailListWrap .detailList li:first-of-type {
+  margin-top: 0;
+}
+.projecDetailInfoWrap .detailListWrap .detailList li:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -10px;
+  width: 4px;
+  height: 1px;
+  background: #333;
+}
+
+/* preview */
+.detailSection.preview .url {
+  display: block;
+  margin-top: 18px;
+  padding-bottom: 10px;
+}
+.detailSection.preview .url:hover {
+  text-decoration: underline;
+}
+.detailSection.preview .url > span {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: var(--orange);
+}
+.detailSection.preview .previewSwiper {
+  max-height: 310px;
+}
+.detailSection.preview .previewSwiper .swiper-slide {
+  overflow: hidden;
+  background: white;
+}
+.detailSection.preview .previewSwiper .swiper-slide > img {
+  width: 100%;
+  object-fit: cover;
+}
+.detailSection.preview .swiper-scrollbar {
+  left: 0;
+  bottom: 0;
+}
+
+/* 모바일 */
+@media screen and (max-width: 759px) {
+  .projectPopContaier {
+    width: 95%;
+  }
+  .closeBtn {
+    width: 14px;
+    height: 14px;
+    right: 10px;
+  }
+  .projectPopCont {
+    padding: 15px;
+  }
+  .projectHeader {
+    padding-top: 10px;
+  }
+  .projectHeader .projectSubTxt {
+    margin-top: 10px;
+  }
+  .projectHeader .toolList {
+    margin-top: 20px;
+  }
+  .projectVisual {
+    width: 100%;
+    margin-top: 42px;
+  }
+  .projectDetailWrap {
+    margin-top: 40px;
+  }
+  .projecDetailInfoWrap .projectList {
+    padding: 20px 15px;
+  }
+  .projecDetailInfoWrap .listHeader .listHeaderCont {
+    width: 90%;
+  }
+  .projecDetailInfoWrap .listHeaderCont .subTit {
+    line-height: 1.2;
+  }
+  .projecDetailInfoWrap .listHeader .badgeWrap {
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .projecDetailInfoWrap .listHeader .badgeWrap > p:after {
+    right: -9.5px;
+    width: 2.5px;
+    height: 2.5px;
+  }
+  .projecDetailInfoWrap .projectList .moreBtn {
+    width: 14px;
+    height: 14px;
+  }
+  .projecDetailInfoWrap .projectList.show .detailCont {
+    margin-top: 48px;
+  }
+  .projecDetailInfoWrap .projectList .detailSection {
+    margin-bottom: 44px;
+  }
+  .projecDetailInfoWrap .projectList .detail {
+    margin-top: 16px;
+  }
+  .projecDetailInfoWrap .projectList .detail > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 6px;
+    margin-bottom: 18px;
+  }
+  .projecDetailInfoWrap .projectList .detail > p > span {
+    padding-left: 0;
+  }
+  .projecDetailInfoWrap .projectList .detail > p > span:last-of-type {
+    width: 100%;
+  }
+  .projecDetailInfoWrap .detailListWrap .listTit {
+    width: 30%;
+  }
+  .projecDetailInfoWrap .detailListWrap .detailList {
+    width: 70%;
+  }
+  .detailSection.preview .url {
+    margin-top: 16px;
+  }
+  .detailSection.preview .previewSwiper {
+    max-height: 190px;
+  }
+}
+
+/* js 기능을 위한 css */
+.projectPopWrap {
+  display: none;
+}
+.projectPopWrap.show {
+  display: block;
+}
+.projecDetailInfoWrap .projectList {
+  margin-bottom: 30px;
+}
+.projecDetailInfoWrap .projectList:last-of-type {
+  margin-bottom: 0;
+}
+.projecDetailInfoWrap .projectList .moreBtn.active {
+  transform: rotate(180deg);
+}
+.projecDetailInfoWrap .projectList .detailCont {
+  height: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+.projecDetailInfoWrap .projectList.show .detailCont {
+  height: 100%;
+  margin-top: 50px;
+}

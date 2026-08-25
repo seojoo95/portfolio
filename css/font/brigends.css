@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "brigends";
+  font-weight: 800;
+  src:
+    local("Brigends Expanded"),
+    url(../../fonts/Brigends\ Expanded.otf) format("otf");
+}

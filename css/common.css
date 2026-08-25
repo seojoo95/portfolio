@@ -1,0 +1,602 @@
+@charset "utf-8";
+
+:root {
+  --white: #fff;
+  --orange: #b54628;
+  --darkgreen: #1e393c;
+  --dark: #121f1e;
+
+  --fs-normall: clamp(12px, 1.5vw, 16px);
+}
+/* 공통 요소 */
+.section,
+.footer {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../images/bg/intro.jpg") no-repeat center / cover;
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+/* intro */
+.introWrap {
+  position: relative;
+  background-image: url("../images/bg/intro.jpg");
+}
+.introTitWrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.8;
+  letter-spacing: 30px;
+  text-align: center;
+}
+.introTit > div {
+  font-size: clamp(20px, 6.5vw, 80px);
+  font-weight: 1000;
+  font-family: "brigends", sans-serif;
+  color: var(--orange);
+  text-align: center;
+}
+
+/* introduce */
+.introduceWrap {
+  padding: 0 50px;
+  background-image: url("../images/bg/introduce.jpg");
+  color: var(--darkgreen);
+}
+.introduceWrap .decoTxt {
+  display: block;
+  padding-top: 30px;
+  color: #89b1a9;
+  opacity: 0.4;
+  font-size: clamp(40px, 6.5vw, 120px);
+  font-family: "brigends", sans-serif;
+}
+.introduceContainer {
+  display: flex;
+  padding-top: 200px;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* 프로필 */
+.profileWrap {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileWrap .imgCont {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.profileWrap .imgCont > img {
+  width: 100%;
+}
+.infoCont {
+  margin-top: 26px;
+}
+.infoCont .name {
+  font-size: clamp(14px, 1.5vw, 22px);
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+.infoCont .name > .enName {
+  margin-left: -5px;
+  font-size: clamp(12px, 1.5vw, 20px);
+  font-weight: 300;
+  letter-spacing: -0.3px;
+}
+.infoCont .info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  margin-left: 2px;
+  font-size: clamp(12px, 1.5vw, 18px);
+}
+.infoCont .info:nth-of-type(2) {
+  margin-top: 12%;
+}
+.infoCont .info > .infoDeco {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(12px, 2vw, 18px);
+}
+
+/* 내 정보 */
+.myInfoWrap {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.myInfoWrap .leftGroup {
+  width: 45%;
+}
+.myInfoWrap .leftGroup .myInfoCont {
+  margin-bottom: 70px;
+}
+.myInfoWrap .leftGroup .myInfoCont:last-of-type {
+  margin-bottom: 0;
+}
+.myInfoWrap .infoTit {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+.myInfoWrap .infoTxtWrap {
+  margin-top: 20px;
+}
+.infoTxtWrap .infoTxt {
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+  font-size: var(--fs-normall);
+  line-height: 1.4;
+}
+.infoTxtWrap .infoTxt:last-of-type {
+  margin-bottom: 0;
+}
+/* 키워드 */
+.keywordCont .infoTxtWrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.keywordCont .infoTxt {
+  position: relative;
+  margin-bottom: 0;
+}
+.keywordCont .infoTxt:after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--darkgreen);
+  opacity: 0.8;
+}
+.keywordCont .infoTxt:last-of-type:after {
+  display: none;
+}
+/* 스킬 */
+.skillCont {
+  width: 55%;
+}
+.infoTxt {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.infoTxt .skillTit {
+  width: 35%;
+  font-size: var(--fs-normall);
+}
+.infoTxt .grahp {
+  position: relative;
+  width: 200px;
+  height: 12px;
+  border-radius: 30px;
+  background-color: #4e5f5d6d;
+}
+.infoTxt .grahp .progress {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 7px;
+  border-radius: 30px;
+  background-color: #1e393c;
+}
+.infoTxt .skillValue {
+  font-size: var(--fs-normall);
+}
+
+/* project */
+.projectWrap {
+  background-image: url("../images/bg/work.jpg");
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  height: 120px;
+  padding: 0 30px;
+  margin: 0 auto;
+  line-height: 80px;
+}
+.logo {
+  width: 40px;
+}
+.logo > img {
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20%;
+}
+.nav li > button {
+  font-size: clamp(12px, 2vw, 22px);
+  font-family: "brigends", sans-serif;
+  color: var(--white);
+  cursor: pointer;
+}
+.nav li.on > button {
+  height: 35px;
+  padding: 0 15px 3px 15px;
+  background-color: var(--orange);
+}
+
+.nav li.on > button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  transition: 300ms;
+}
+.nav li > button:hover {
+  color: var(--orange);
+  transition: 300ms;
+}
+
+/* 프로젝트 리스트 */
+.projectListWrap {
+  position: relative;
+  max-width: 1600px;
+  height: calc(100% - 200px);
+  padding: 0 90px;
+  margin: 0 auto;
+}
+.projectListWrap .projectList {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 80px 10%;
+}
+.projectList .projectCont {
+  width: calc((100% - 20%) / 3);
+  max-width: 370px;
+}
+.projectListWrap.work .projectList {
+  gap: 80px 12%;
+}
+.work .projectList .projectCont {
+  width: calc((100% - 10%) / 2);
+}
+.projectList .projectCont:hover .folderImg {
+  box-shadow:
+    3px 6px 10px rgba(112, 130, 132, 0.65),
+    8px 10px 15px rgba(104, 117, 120, 0.3);
+  transition: 300ms;
+  cursor: pointer;
+}
+.projectCont .folderImg {
+  position: relative;
+}
+.projectCont .folderImg > img {
+  width: 100%;
+}
+.folderImg .DecoTxtWrap > p {
+  position: absolute;
+  font-size: clamp(8px, 1.4vw, 12px);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.folderImg .DecoTxtWrap .number {
+  top: 2%;
+  right: 4%;
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 800;
+}
+.folderImg .DecoTxtWrap .tit {
+  top: 19%;
+  right: 7%;
+  font-size: clamp(12px, 1.4vw, 14px);
+  font-weight: 800;
+}
+.folderImg .DecoTxtWrap .category {
+  top: 26%;
+  left: 3%;
+}
+.folderImg .DecoTxtWrap .purpose {
+  bottom: 3%;
+  left: 3%;
+}
+.folderImg .DecoTxtWrap .year {
+  bottom: 3%;
+  right: 3%;
+}
+.folderName {
+  margin-top: 24px;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 800;
+  color: var(--white);
+}
+.folderName .subTxt {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--white);
+}
+.animationWrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 30px 0;
+  opacity: 0.4;
+}
+.animationCont {
+  display: inline-block;
+  white-space: nowrap;
+  animation: loop 20s linear infinite;
+}
+.animationCont > span {
+  padding-right: 50px;
+  font-family: "brigends", sans-serif;
+  font-size: clamp(12px, 2vw, 22px);
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+/* 무한 스크롤 키프레임 */
+@keyframes loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+/* footer */
+.footer {
+  position: relative;
+  background-image: url("../images/bg/end.jpg");
+  color: var(--darkgreen);
+  text-align: center;
+}
+.footerCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 100%;
+}
+.footerCont p {
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.footerCont p:last-of-type {
+  margin-top: 34px;
+  font-weight: 300;
+}
+.footerCont .infoWrap {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 160px;
+  text-align: left;
+}
+.footerCont .infoWrap li {
+  display: flex;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 300;
+  line-height: 2.6;
+}
+.footerCont .infoWrap li > span {
+  display: block;
+  width: 70px;
+  margin-right: 10px;
+  text-transform: capitalize;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 700;
+}
+
+/* 기타 필요 사이즈 */
+@media screen and (max-width: 1600px) {
+  /* 인트로 */
+  .introTitWrap {
+    transform: translate(-47%, -50%);
+  }
+}
+@media screen and (max-width: 1400px) {
+  /* 프로필 */
+  .introduceContainer {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+  .profileWrap {
+    flex-direction: row;
+    width: 100%;
+    gap: 8%;
+  }
+  .profileWrap .imgCont {
+    width: 220px;
+    max-width: none;
+    margin: 0;
+  }
+  .profileWrap .infoCont {
+    margin-top: 0;
+  }
+
+  /* 내 정보 */
+  .myInfoWrap {
+    width: 100%;
+    margin-top: 80px;
+    gap: 5%;
+  }
+  .myInfoWrap .leftGroup {
+    width: 50%;
+  }
+  .myInfoWrap .leftGroup .myInfoCont {
+    margin-bottom: 54px;
+  }
+  /* 스킬 */
+  .skillCont {
+    width: 45%;
+  }
+  .infoTxt .skillTit {
+    width: 35%;
+  }
+}
+
+/* 타블렛 */
+@media screen and (max-width: 1024px) {
+  /* 프로젝트 리스트*/
+  .projectListWrap .projectList {
+    width: 90%;
+    top: 50%;
+    gap: 80px 15%;
+  }
+  .projectList .projectCont {
+    width: calc((100% - 30%) / 2);
+    max-width: 280px;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 759px) {
+  /* 인트로 */
+  .introTit {
+    letter-spacing: 15px;
+  }
+  /* introduce */
+  .introduceWrap {
+    height: auto;
+    padding: 0;
+    padding-bottom: 50px;
+    background-position: top 0 right -400px;
+  }
+  .introduceWrap .decoTxt {
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #75948d;
+  }
+  .introduceContainer {
+    padding-top: 30px;
+  }
+  /* 프로필 */
+  .profileWrap .imgCont {
+    width: 140px;
+  }
+  /* 내 정보 */
+  .myInfoWrap {
+    display: block;
+    margin-top: 40px;
+  }
+  .myInfoWrap .infoTxtWrap {
+    margin-top: 16px;
+  }
+  .myInfoWrap .leftGroup {
+    width: 100%;
+  }
+  .myInfoWrap .leftGroup .myInfoCont {
+    margin-bottom: 40px;
+  }
+  /* 스킬 */
+  .skillCont {
+    width: 100%;
+    margin-top: 34px;
+  }
+  .skillCont .infoTxt {
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .infoTxt .skillTit {
+    width: 30%;
+  }
+  .infoTxt .grahp {
+    width: 60%;
+    height: 10px;
+  }
+  .infoTxt .grahp .progress {
+    height: 5px;
+  }
+  .infoTxt .skillValue {
+    width: 10%;
+    text-align: right;
+  }
+  /* project */
+  .projectWrap {
+    height: auto;
+  }
+  .header {
+    height: 80px;
+    padding: 0 20px;
+  }
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  .nav {
+    gap: 20px;
+  }
+  .nav > li.on {
+    height: 22px;
+    line-height: 20px;
+    padding: 0 12px;
+  }
+  /* 프로젝트 리스트 */
+  .projectListWrap {
+    padding: 0;
+  }
+  .projectListWrap .projectList {
+    position: initial;
+    display: block;
+    transform: none;
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+  .projectList .projectCont,
+  .work .projectList .projectCont {
+    width: 240px;
+    max-width: none;
+    margin: 0 auto;
+    margin-bottom: 42px;
+  }
+  .projectList .projectCont:last-of-type {
+    margin-bottom: 0;
+  }
+  .animationWrap {
+    padding: 20px 0;
+  }
+
+  .footerCont {
+    width: 90%;
+  }
+  .footerCont .infoWrap {
+    margin-top: 100px;
+  }
+}
+
+/* js를 위한 css */
+.projectListWrap {
+  display: none;
+}
+.projectListWrap.show {
+  display: block;
+}
