@@ -235,10 +235,17 @@
   line-height: 80px;
 }
 .logo {
-  width: 40px;
+  width: 28px;
+  height: 28px;
 }
-.logo > img {
+.logo a {
+  display: block;
   width: 100%;
+  height: 100%;
+}
+.logo a > img {
+  width: 100%;
+  height: auto;
 }
 nav {
   height: 100%;
@@ -421,6 +428,14 @@ nav {
   font-size: clamp(16px, 2vw, 18px);
   font-weight: 300;
   line-height: 2.6;
+}
+.footerCont .infoWrap li > a {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 300;
+  line-height: 2.6;
+}
+.footerCont .infoWrap li:hover > a {
+  text-decoration: underline;
 }
 .footerCont .infoWrap li > span {
   display: block;
@@ -611,8 +626,8 @@ nav {
     padding: 0 20px;
   }
   .logo {
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
   }
   .nav {
     gap: 20px;

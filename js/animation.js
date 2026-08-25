@@ -42,7 +42,7 @@ function pageAnimation() {
 
 function sectionScroll() {
   ScrollTrigger.matchMedia({
-    "(min-width: 1400px) and (min-height:1000px)": function () {
+    "(min-width: 1400px)": function () {
       const sections = gsap.utils.toArray(".section");
       const introWrap = document.querySelector(".section.introduceWrap");
 
@@ -68,9 +68,6 @@ function sectionScroll() {
         });
       });
     },
-    "(max-width: 1023px)": function () {
-      progress();
-    },
   });
 }
 
@@ -90,5 +87,6 @@ function progressReset() {
     bar.style.width = "0%";
   });
 }
+progress();
 sectionScroll();
 pageAnimation();
