@@ -27,8 +27,8 @@ function showHandle(button, el) {
         // 데이터값 비교후 같은 값 보여주기
         if (btnId === elId) {
           el.classList.add("show");
-          body.classList.add("noScroll");
           if (el.classList.contains("projectPopWrap")) {
+            body.classList.add("noScroll");
             const closeBtn = el.querySelector(".closeBtn");
 
             closeBtn.addEventListener("click", () => {
