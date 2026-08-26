@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 1920px;
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
   margin: 0 auto;
   background: url("../images/bg/intro.jpg") no-repeat center / cover;
   background-color: var(--dark);
@@ -57,13 +57,12 @@
 
 /* introduce */
 .introduceWrap {
-  padding: 0 50px;
+  padding: 20px 50px;
   background-image: url("../images/bg/introduce.jpg");
   color: var(--darkgreen);
 }
 .introduceWrap .decoTxt {
   display: block;
-  padding-top: 20px;
   color: #89b1a9;
   opacity: 0.4;
   font-size: clamp(40px, 6.5vw, 120px);
@@ -73,6 +72,7 @@
   height: calc(100% - 140px);
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
   gap: 30px;
 }
@@ -293,18 +293,15 @@ nav {
   margin: 0 auto;
 }
 .projectListWrap .projectList {
-  height: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 60px 50px;
+  width: 90%;
+  height: 100%;
+  justify-items: center;
+  align-items: start;
+  align-content: center;
   margin: 0 auto;
-  gap: 3%;
-}
-.projectList .projectCont {
-  width: calc((100% - 10%) / 3);
-}
-.work .projectList .projectCont {
-  width: calc((100% - 10%) / 3);
 }
 .projectList .projectCont:hover .folderImg {
   box-shadow:
@@ -363,10 +360,8 @@ nav {
   color: var(--white);
 }
 .animationWrap {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
   width: 100%;
+  padding: 60px 0 20px 0;
   overflow: hidden;
   white-space: nowrap;
   opacity: 0.4;
@@ -527,32 +522,14 @@ nav {
   .nav {
     gap: 30px;
   }
-  .projectListWrap {
-    height: 700px;
-  }
-
-  .projectListWrap .projectList {
-    width: 95%;
-    height: 80%;
-    flex-wrap: wrap;
-    gap: 0 60px;
-  }
-  .work .projectListWrap .projectList {
-    justify-content: flex-start;
-  }
-  .projectList .projectCont,
-  .work .projectList .projectCont {
-    width: calc((100% - 10%) / 2);
-    max-width: 240px;
-  }
-}
-@media screen and (max-width: 989px) {
-  .projectListWrap .projectList {
-    justify-content: center;
-  }
 }
 /* 모바일 */
 @media screen and (max-width: 759px) {
+  .section,
+  .footer {
+    height: 100vh;
+    min-height: auto;
+  }
   /* 인트로 */
   .introTit {
     letter-spacing: 15px;
@@ -641,16 +618,12 @@ nav {
     padding-top: 30px;
     margin: 0 auto;
   }
-  .projectList .projectCont,
-  .work .projectList .projectCont {
+  .projectList .projectCont {
     width: 190px;
-    max-width: none;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    margin-top: 34px;
   }
-  .projectList .projectCont:last-of-type {
-    margin-bottom: 0;
-    padding-bottom: 80px;
+  .projectList .projectCont:first-of-type {
+    margin-top: 0;
   }
   .folderName {
     margin-top: 12px;
@@ -664,16 +637,6 @@ nav {
   }
   .footerCont .infoWrap {
     margin-top: 100px;
-  }
-}
-/* 가로형 */
-@media (orientation: landscape) and (pointer: coarse) {
-  .projectListWrap .projectList {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .work .projectList .projectCont {
-    width: calc((100% - 10%) / 3);
   }
 }
 

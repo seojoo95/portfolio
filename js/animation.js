@@ -42,15 +42,15 @@ function pageAnimation() {
 
 function sectionScroll() {
   ScrollTrigger.matchMedia({
-    "(min-width: 1400px)": function () {
+    "(min-width: 1400px) and (min-height:800px)": function () {
       const sections = gsap.utils.toArray(".section");
       const introWrap = document.querySelector(".section.introduceWrap");
 
       ScrollTrigger.create({
         trigger: introWrap,
-        start: "top top",
+        start: "top 40%",
 
-        onEnter: () => {
+        onUpdate: () => {
           progress();
         },
 
