@@ -222,6 +222,7 @@
 /* project */
 .projectWrap {
   position: relative;
+  padding-bottom: 20px;
   background-image: url("../images/bg/work.jpg");
 }
 .header {
@@ -302,6 +303,7 @@ nav {
   align-items: start;
   align-content: center;
   margin: 0 auto;
+  padding-bottom: 60px;
 }
 .projectList .projectCont:hover .folderImg {
   box-shadow:
@@ -361,7 +363,6 @@ nav {
 }
 .animationWrap {
   width: 100%;
-  padding: 60px 0 20px 0;
   overflow: hidden;
   white-space: nowrap;
   opacity: 0.4;
@@ -409,13 +410,13 @@ nav {
   line-height: 1.6;
 }
 .footerCont p:last-of-type {
-  margin-top: 34px;
+  margin-top: 30px;
   font-weight: 300;
 }
 .footerCont .infoWrap {
   width: fit-content;
   margin: 0 auto;
-  margin-top: 160px;
+  margin-top: 10%;
   text-align: left;
 }
 .footerCont .infoWrap li {
@@ -507,18 +508,6 @@ nav {
 }
 /* 타블렛 */
 @media screen and (max-width: 1024px) {
-  .introduceWrap {
-    height: 700px;
-  }
-  .introduceWrap,
-  .projectWrap {
-    height: fit-content;
-    padding-bottom: 100px;
-  }
-  .projectWrap {
-    height: 700px;
-    padding-bottom: 0;
-  }
   .nav {
     gap: 30px;
   }
@@ -527,8 +516,15 @@ nav {
 @media screen and (max-width: 759px) {
   .section,
   .footer {
-    height: 100vh;
+    height: auto;
     min-height: auto;
+  }
+  .introWrap,
+  .footer {
+    height: 100vh;
+  }
+  .footer {
+    min-height: 400px;
   }
   /* 인트로 */
   .introTit {
@@ -536,7 +532,6 @@ nav {
   }
   /* introduce */
   .introduceWrap {
-    height: auto;
     padding: 0;
     padding-bottom: 50px;
     background-position: top 0 right -400px;
@@ -592,9 +587,6 @@ nav {
     text-align: right;
   }
   /* project */
-  .projectWrap {
-    height: auto;
-  }
   .projectListWrap {
     height: auto;
   }
@@ -631,12 +623,8 @@ nav {
   .folderImg .DecoTxtWrap .number {
     top: 1.5px;
   }
-
   .footerCont {
     width: 90%;
-  }
-  .footerCont .infoWrap {
-    margin-top: 100px;
   }
 }
 
